@@ -117,14 +117,14 @@ usuario = Cadastro()
 
 ### Windows PowerShell
 
-![image-20210314141431728](C:\Users\Thiago\AppData\Roaming\Typora\typora-user-images\image-20210314141431728.png)
+![Dir](https://github.com/ThiagoLozano/Senha_Escondida/blob/main/Win_PowerShell/Dir.PNG)
 
-![image-20210314141643828](C:\Users\Thiago\AppData\Roaming\Typora\typora-user-images\image-20210314141643828.png)
+![Main](https://github.com/ThiagoLozano/Senha_Escondida/blob/main/Win_PowerShell/Main.PNG)
 
 
 
 ### Linux
 
-![image-20210314141832500](C:\Users\Thiago\Documents\Thiago Lozano de Souza\GitHub\Senha_Escondida\Linux\Dir.png)
+![Dir](https://github.com/ThiagoLozano/Senha_Escondida/blob/main/Linux/Dir.png)
 
-![image-20210314142858781](C:\Users\Thiago\AppData\Roaming\Typora\typora-user-images\image-20210314142858781.png)
+![Main](https://github.com/ThiagoLozano/Senha_Escondida/blob/main/Linux/Main.PNG)
