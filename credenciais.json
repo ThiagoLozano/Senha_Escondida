@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "User": "Thiago",
+        "Credentials": {
+            "Login": "Teste",
+            "Password": "teste123"
+        }
+    },
+    {
+        "id": 2,
+        "User": "Lozano",
+        "Credentials": {
+            "Login": "Teste2",
+            "Password": "teste321"
+        }
+    }
+]
