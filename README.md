@@ -35,24 +35,14 @@ usuario = Cadastro()
 ### Credenciais JSON
 
 ```json
-[
-    {
-        "id": 1,
-        "User": "Thiago",
-        "Credentials": {
-            "Login": "Teste",
-            "Password": "teste123"
-        }
-    },
-    {
-        "id": 2,
-        "User": "Lozano",
-        "Credentials": {
-            "Login": "Teste2",
-            "Password": "teste321"
-        }
+{
+    "id": 1,
+    "User": "Thiago",
+    "Credentials": {
+        "Login": "Teste",
+        "Password": "123"
     }
-]
+}
 ```
 
 > O __credenciais.json__ serve para armazenar os dados dos usuários já cadastrados no sistema.
@@ -84,30 +74,30 @@ usuario = Cadastro()
 ### Login 
 
 ```python
-1	def Login(self):
-2      print("\n********** LOGIN ******************")
-3      name = str(input("Digite seu nome: "))
-4      password =  getpass.getpass("Digite sua Senha: ")5
-5
-6      for c in self.credenc:
-7         if name == c['Credentials']['Login'] and password == c['Credentials']['Password']:
-8          	print("Login efetuado com sucesso.")
-9           print("Bem vindo {}\n".format(c['User']))
-10          break
-11        else:
-12          print("ERROR: Nome ou Senha estão incorretos")
-13          break
+1. def Login(self):
+2.    while True:
+3.        print("\n********** LOGIN ******************")
+4.        name = str(input("Digite seu nome: "))
+5.        password = getpass.getpass("Digite sua Senha: ")
+6.
+7.        if name == self.credenc['Credentials']['Login'] and password == self.credenc['Credentials']['Password']:
+8.        	print("Login efetuado com sucesso.")
+9.        	print("Bem vindo {}\n".format(self.credenc['User']))
+10.         break
+11.       else:
+12.          print("ERROR: Nome ou Senha estão incorretos")
+13.          break
 ```
 
 > Linha 1: Cria a função __Login()__
 >
-> Linha 2:  Imprime um texto na tela.
+> Linha 2:  Cria um loop.
 >
-> Linha 3: Cria uma variável que recebe o nome de entrada.
+> Linha 3: Imprime um texto na tela.
 >
-> Linha 4: Cria uma variável que recebe a senha de entrada.
+> Linha 4: Cria uma variável que recebe o nome de entrada.
 >
-> Linha 6: Cria um laço que passa pelos usuários cadastrados no __credenciais.json__
+> Linha 5: Cria uma variável que recebe a senha de entrada.
 >
 > Linha 7: Valida se o nome e senha são compatíveis com os dados do JSON.
 >
@@ -123,3 +113,18 @@ usuario = Cadastro()
 >
 > Linha 13: Fecha o laço.
 
+# Exemplo
+
+### Windows PowerShell
+
+![image-20210314141431728](C:\Users\Thiago\AppData\Roaming\Typora\typora-user-images\image-20210314141431728.png)
+
+![image-20210314141643828](C:\Users\Thiago\AppData\Roaming\Typora\typora-user-images\image-20210314141643828.png)
+
+
+
+### Linux
+
+![image-20210314141832500](C:\Users\Thiago\Documents\Thiago Lozano de Souza\GitHub\Senha_Escondida\Linux\Dir.png)
+
+![image-20210314142858781](C:\Users\Thiago\AppData\Roaming\Typora\typora-user-images\image-20210314142858781.png)
