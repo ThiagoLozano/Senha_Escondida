@@ -11,14 +11,14 @@ class Cadastro:
 
     # Função que faz o Login.
     def Login(self):
-        print("\n********** LOGIN ******************")
-        name = str(input("Digite seu nome: "))
-        password =  getpass.getpass("Digite sua Senha: ")
+        while True:
+            print("\n********** LOGIN ******************")
+            name = str(input("Digite seu nome: "))
+            password = getpass.getpass("Digite sua Senha: ")
 
-        for c in self.credenc:
-            if name == c['Credentials']['Login'] and password == c['Credentials']['Password']:
+            if name == self.credenc['Credentials']['Login'] and password == self.credenc['Credentials']['Password']:
                 print("Login efetuado com sucesso.")
-                print("Bem vindo {}\n".format(c['User']))
+                print("Bem vindo {}\n".format(self.credenc['User']))
                 break
             else:
                 print("ERROR: Nome ou Senha estão incorretos")
