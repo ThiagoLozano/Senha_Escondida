@@ -36,7 +36,6 @@ usuario = Cadastro()
 
 ```json
 {
-    "id": 1,
     "User": "Thiago",
     "Credentials": {
         "Login": "Teste",
@@ -46,8 +45,6 @@ usuario = Cadastro()
 ```
 
 > O __credenciais.json__ serve para armazenar os dados dos usuários já cadastrados no sistema.
->
-> __id__: Número de identificação dos usuários.
 >
 > __User__: Nome do usuário.
 >
@@ -60,7 +57,7 @@ usuario = Cadastro()
 ``` python
 1. with open('./credenciais.json', 'r') as f:
 2.     self.credenc = json.load(f)
-3.     self.Login()
+3.     self.Get_Login()
 ```
 
 > Linha 1: Abre o arquivo JSON e atribui á uma variável __f__
@@ -74,22 +71,22 @@ usuario = Cadastro()
 ### Login 
 
 ```python
-1. def Login(self):
+1. def Get_Login(self):
 2.    while True:
 3.        print("\n********** LOGIN ******************")
-4.        name = str(input("Digite seu nome: "))
+4.        name = str(input("Digite seu Login: "))
 5.        password = getpass.getpass("Digite sua Senha: ")
 6.
 7.        if name == self.credenc['Credentials']['Login'] and password == self.credenc['Credentials']['Password']:
-8.        	print("Login efetuado com sucesso.")
-9.        	print("Bem vindo {}\n".format(self.credenc['User']))
+8.        	print("Login efetuado com sucesso!")
+9.        	print(f"Bem-vindo(a), {self.credenc['User']}.\n")
 10.         break
 11.       else:
 12.          print("ERROR: Nome ou Senha estão incorretos")
 13.          break
 ```
 
-> Linha 1: Cria a função __Login()__
+> Linha 1: Cria a função __Get_Login()__
 >
 > Linha 2:  Cria um loop.
 >
